@@ -3,17 +3,44 @@ import logo from './logo.svg';
 import './App.css';
 
 import NavBar from './components/NavBar';
+import Body from './components/Body';
+import CoverImage from './components/CoverImage';
 import Header from './components/Header';
+import About from './components/About';
+import VerticalSpace from './components/VerticalSpace';
+
+import Paper from '@material-ui/core/Paper';
+import Grid from '@material-ui/core/Grid';
+
 export default function App() {
   return (
-
     <div>
       <NavBar />
-      <Header/>
-      <div style={styles.container}>
-        <h1>hey</h1>
-      </div>
+      <Body />
     </div>
+
+
+    // <div>
+    //   <Grid container spacing={1}>
+
+    //     <Grid item xs={12}>
+    //       <NavBar />
+    //     </Grid>
+    //     <Grid item xs={12}>
+    //       <CoverImage />
+    //     </Grid>
+
+    //     <Grid item xs={12}>
+    //       <Header />
+    //     </Grid>
+    //   </Grid>
+
+    //   <CoverImage />
+
+    //   <About />
+
+    //   <VerticalSpace />
+    // </div>
 
     // <div className="App">
     //   <header className="App-header">

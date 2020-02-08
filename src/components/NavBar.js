@@ -22,7 +22,7 @@ class NavBar extends Component {
 
     render() {
         return (
-            <AppBar position='static' style={styles.navBarContainer}>
+            <AppBar position='sticky' style={styles.navBarContainer}>
                 <Toolbar>
 
                     <p style={styles.headerText}>Zev <b>Yirmiyahu</b></p>

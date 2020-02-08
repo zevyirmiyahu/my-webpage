@@ -1,3 +1,7 @@
+.body{
+  background-image: url('./assets/desert-cover.jpg');
+}
+
 .App {
   text-align: center;
 }

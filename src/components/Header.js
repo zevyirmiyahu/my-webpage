@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
-import { Container, Grid } from '@material-ui/core';
-import CoverPhoto from '../assets/desert-cover.jpg';
+import { Container } from '@material-ui/core';
 
 export default class Header extends Component {
 
@@ -13,22 +12,11 @@ export default class Header extends Component {
         );
     }
 
-    CoverImage = () => {
-        return (
-            <div style={styles.image}>
-                <img src={CoverPhoto} alt='Desert-Photo' />
-            </div>
-        );
-    }
-
     render() {
         return (
             <div>
-                <this.CoverImage />
-                <Container style={{ paddingBottom: '34%' }} maxWidth='md'>
-
+                <Container maxWidth='md'>
                     <this.header />
-
                 </Container>
 
             </div>
@@ -37,17 +25,12 @@ export default class Header extends Component {
 }
 
 const styles = {
-    image: {
-        zIndex: -1,
-        position: 'absolute',
-        top: 0,
-        left: 0,
-    },
     headerContainer: {
         paddingTop: '10%'
     },
     headerText: {
         textAlign: 'center',
-        fontSize: 60
+        fontSize: 60,
+        color: '#282c34' // dark grey
     }
 }
