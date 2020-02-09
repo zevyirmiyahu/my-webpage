@@ -15,6 +15,11 @@ export default class AboutSection extends Component {
         }
     }
 
+    // used to space buttons
+    spaceBlock = () => {
+        return <div style={{ padding: 50 }}></div>
+    }
+
     Header = () => {
         return <p style={styles.headerText}> {`<Code is law .../>`} </p>
     }
@@ -40,7 +45,7 @@ export default class AboutSection extends Component {
     }
 
 
-    showOnClick = () => {
+    showTechOnClick = () => {
         if (!this.state.show) {
             this.setState({
                 show: !this.state.show,
@@ -55,20 +60,36 @@ export default class AboutSection extends Component {
         }
     }
 
+    showEduOnClick = () => {
+
+    }
+
     // Button determines whether skils are shown
-    ShowButton = () => {
+    ShowTechSkillsButton = () => {
         return (
             <Button
                 style={{ backgroundColor: COLOR.MINT_GREEN }}
-                onClick={this.showOnClick}
+                onClick={this.showTechOnClick}
             >
                 {this.state.techButtonText}
             </Button>
         );
     }
 
+      // Button determines whether skils are shown
+      ShowEducationButton = () => {
+        return (
+            <Button
+                style={{ backgroundColor: COLOR.MINT_GREEN }}
+                onClick={this.showEduOnClick}
+            >
+                Show Education
+            </Button>
+        );
+    }
+
     MadeWith = () => {
-        return(
+        return (
             <div style={styles.madeWith}>
                 <p>Built with ReactJS</p>
             </div>
@@ -80,9 +101,17 @@ export default class AboutSection extends Component {
             <div style={{ display: 'flex', flexDirection: 'row' }}>
                 <p style={styles.techText}>
                     <span style={{ fontWeight: '500', paddingRight: 15 }}>Tech Stack:</span>
-                    <this.ShowButton />
+                    <this.ShowTechSkillsButton />
                 </p>
-                    <this.MadeWith />
+
+                <this.spaceBlock />
+
+                <p style={styles.techText}>
+                    <span style={{ fontWeight: '500', paddingRight: 15 }}>Education:</span>
+                    <this.ShowEducationButton />
+                </p>
+
+                <this.MadeWith />
 
             </div>
         );
@@ -90,7 +119,6 @@ export default class AboutSection extends Component {
 
     TechSkillSection = () => {
         if (this.state.show) {
-
             return (
                 <div>
                     <p style={styles.techText}>
@@ -114,10 +142,18 @@ export default class AboutSection extends Component {
                         <span style={{ fontWeight: '500' }}>Version Control: </span>Git, GitHub<br />
                     </p>
                 </div>
-
             );
         }
         else return null;
+    }
+
+
+    EducationSection = () => {
+        return (
+            <div>
+
+            </div>
+        );
     }
 
     Divider = () => {
@@ -173,8 +209,8 @@ const styles = {
     madeWith: {
         fontSize: 20,
         fontWeight: '200',
-        display: 'flex', 
-        marginLeft: 'auto', 
+        display: 'flex',
+        marginLeft: 'auto',
         color: COLOR.MINT_GREEN
     }
 }
