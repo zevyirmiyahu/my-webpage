@@ -35,14 +35,21 @@ export default class AboutSection extends Component {
                     <span style={{ fontWeight: '500' }}>Back-End Frameworks: </span>Spring, Spring Boot<br/>
                     <span style={{ fontWeight: '500' }}>Languages: </span>Java, C#, C/C++, Ruby, SML, R, MatLab, JavaScript, TypeScript, Oracle SQL<br/>
                     <span style={{ fontWeight: '500' }}>Java Technologies: </span>JDBC, JUnit, Swing, Servlets, Tomcat<br/>
+                    <span style={{ fontWeight: '500' }}>JavaScript Technologies: </span>ReactJS, Axios<br/>
+                    <span style={{ fontWeight: '500' }}>UI Libraries: </span>BootStrap, Material UI<br/>
+
                     <span style={{ fontWeight: '500' }}>React Native Technologies: </span>Redux, React Redux, React Camera, React Navigation, React Native Navigation<br/>
-                    <span style={{ fontWeight: '500' }}>Front-End Frameworks: </span>Angular, React Native<br/>
-                    <span style={{ fontWeight: '500' }}>Front-End Frameworks: </span>Angular, React Native<br/>
-
-
-                
+                    <span style={{ fontWeight: '500' }}>Operating Systems: </span>Windows, Linux, macOS<br/>
+                    <span style={{ fontWeight: '500' }}>Cloud Computing: </span>AWS (AMI, EC2, S3)<br/>
+                    <span style={{ fontWeight: '500' }}>Web Services: </span>Rest, SOAP<br/>
+                    <span style={{ fontWeight: '500' }}>Development Tools: </span>Spring Tool Suite, Eclipse, Visual Studio, Visual Studio Code, Xcode, Android Studio, Oracle Developer<br/>
+                    <span style={{ fontWeight: '500' }}>Testing Tools: </span>JUnit<br/>
+                    <span style={{ fontWeight: '500' }}>Build Tools: </span>Maven<br/>
+                    <span style={{ fontWeight: '500' }}>Collaboration Tools: </span>Zoom, Slack<br/>
+                    <span style={{ fontWeight: '500' }}>Development Enviroment: </span>Agile<br/>
+                    <span style={{ fontWeight: '500' }}>Project Management Tools: </span>Jira<br/>
+                    <span style={{ fontWeight: '500' }}>Version Control: </span>Git, GitHub<br/>                
                 </p>
-                <p style={styles.techText}><span style={{ fontWeight: '500' }}>Front-End Frameworks: </span>Angular, React Native</p>
             </div>
             
         );

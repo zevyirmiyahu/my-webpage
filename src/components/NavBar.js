@@ -12,7 +12,7 @@ class NavBar extends Component {
 
     // used to space buttons
     spaceButtonBlock = () => {
-        return <div style={{ padding: 20 }}></div>
+        return <div style={{ padding: 10 }}></div>
     }
 
     // used to space icons and font inside buttons
@@ -39,6 +39,9 @@ class NavBar extends Component {
                         <Button style={styles.button2}><GitHubIcon/><this.spaceIconBlock/>GitHub</Button>
                         <this.spaceButtonBlock/>
                         <Button style={styles.button2}><LinkedInIcon/><this.spaceIconBlock/>LinkedIn</Button>
+                        <this.spaceButtonBlock/>
+                        <Button style={styles.button2}><LinkedInIcon/><this.spaceIconBlock/>Resume</Button>
+                        
                     </div>
 
                 </Toolbar>
