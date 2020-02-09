@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 
-import { Container, Button } from '@material-ui/core';
+import { Container, Button, Avatar } from '@material-ui/core';
 
 import * as COLOR from '../constants/Colors';
+import ProfileImage from '../assets/desert-cover.jpg';
 
 
 export default class AboutSection extends Component {
@@ -10,6 +11,7 @@ export default class AboutSection extends Component {
         super(props);
         this.state = {
             show: false, // show tech skills
+            techButtonText: 'Show Skills'
         }
     }
 
@@ -23,40 +25,71 @@ export default class AboutSection extends Component {
 
     About = () => {
         return (
-            <p style={styles.aboutText}>
-                Greetings, I'm a <span style={{ fontWeight: '400' }}>full stack developer</span> with experience building large scale
-                mobile applications in React Native, as well as experience developing microservice
-                applications.
-            </p>
+            <div style={{ display: 'flex', flexDirection: 'row' }}>
+                <Avatar alt='Zev' src={ProfileImage} style={{ marginTop: 50, width: 150, height: 150 }} />
+                <div style={{ paddingLeft: 20 }}>
+                    <this.Subheader />
+                    <p style={styles.aboutText}>
+                        Greetings, I'm a <span style={{ fontWeight: '300' }}>full stack developer</span> with experience building large scale
+                        mobile applications in React Native, as well as experience developing microservice
+                        applications.
+                     </p>
+                </div>
+            </div>
         );
     }
 
 
     showOnClick = () => {
-        this.setState({
-            show: !this.state.show
-        });
+        if (!this.state.show) {
+            this.setState({
+                show: !this.state.show,
+                techButtonText: 'Hide Skills'
+            });
+        }
+        else {
+            this.setState({
+                show: !this.state.show,
+                techButtonText: 'Show Skills'
+            });
+        }
     }
 
+    // Button determines whether skils are shown
     ShowButton = () => {
         return (
-            <Button style={{ backgroundColor: COLOR.MINT_GREEN }}
+            <Button
+                style={{ backgroundColor: COLOR.MINT_GREEN }}
                 onClick={this.showOnClick}
-            >Show Skills</Button>
+            >
+                {this.state.techButtonText}
+            </Button>
+        );
+    }
+
+    MadeWith = () => {
+        return(
+            <div style={styles.madeWith}>
+                <p>Built with ReactJS</p>
+            </div>
         );
     }
 
     TechSkillSectionHeader = () => {
         return (
-            <p style={styles.techText}>
-                <span style={{ fontWeight: '500', paddingRight: 15 }}>Tech Stack:</span>
-                <this.ShowButton />
-            </p>
+            <div style={{ display: 'flex', flexDirection: 'row' }}>
+                <p style={styles.techText}>
+                    <span style={{ fontWeight: '500', paddingRight: 15 }}>Tech Stack:</span>
+                    <this.ShowButton />
+                </p>
+                    <this.MadeWith />
+
+            </div>
         );
     }
 
     TechSkillSection = () => {
-        if(this.state.show) {
+        if (this.state.show) {
 
             return (
                 <div>
@@ -67,7 +100,7 @@ export default class AboutSection extends Component {
                         <span style={{ fontWeight: '500' }}>Java Technologies: </span>JDBC, JUnit, Swing, Servlets, Tomcat<br />
                         <span style={{ fontWeight: '500' }}>JavaScript Technologies: </span>ReactJS, Axios<br />
                         <span style={{ fontWeight: '500' }}>UI Libraries: </span>BootStrap, Material UI<br />
-    
+
                         <span style={{ fontWeight: '500' }}>React Native Technologies: </span>Redux, React Redux, React Camera, React Navigation, React Native Navigation<br />
                         <span style={{ fontWeight: '500' }}>Operating Systems: </span>Windows, Linux, macOS<br />
                         <span style={{ fontWeight: '500' }}>Cloud Computing: </span>AWS (AMI, EC2, S3)<br />
@@ -81,7 +114,7 @@ export default class AboutSection extends Component {
                         <span style={{ fontWeight: '500' }}>Version Control: </span>Git, GitHub<br />
                     </p>
                 </div>
-    
+
             );
         }
         else return null;
@@ -96,7 +129,6 @@ export default class AboutSection extends Component {
             <div>
                 <this.Header />
                 <Container maxWidth="lg">
-                    <this.Subheader />
                     <this.About />
                     <this.Divider />
                     <this.TechSkillSectionHeader />
@@ -120,7 +152,7 @@ const styles = {
     headerText: {
         textAlign: 'center',
         fontSize: 50,
-        fontWeight: '100',
+        fontWeight: '200',
         color: 'white'
     },
     subheaderText: {
@@ -137,5 +169,12 @@ const styles = {
         fontSize: 20,
         fontWeight: '200',
         color: 'white'
+    },
+    madeWith: {
+        fontSize: 20,
+        fontWeight: '200',
+        display: 'flex', 
+        marginLeft: 'auto', 
+        color: COLOR.MINT_GREEN
     }
 }
