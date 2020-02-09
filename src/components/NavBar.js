@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import { AppBar, Toolbar, Button } from '@material-ui/core';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import DescriptionIcon from '@material-ui/icons/Description';
 
 import * as COLOR from '../constants/Colors';
 
@@ -38,7 +39,7 @@ class NavBar extends Component {
                         <this.spaceButtonBlock/>
                         <Button style={styles.button2}><LinkedInIcon/><this.spaceIconBlock/>LinkedIn</Button>
                         <this.spaceButtonBlock/>
-                        <Button style={styles.button2}><LinkedInIcon/><this.spaceIconBlock/>Resume</Button> 
+                        <Button style={styles.button2}><DescriptionIcon/><this.spaceIconBlock/>Resume</Button> 
                     </div>
 
                 </Toolbar>
