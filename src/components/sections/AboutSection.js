@@ -159,7 +159,6 @@ export default class AboutSection extends Component {
         else return null;
     }
 
-
     EducationSection = () => {
         return (
             <div>
