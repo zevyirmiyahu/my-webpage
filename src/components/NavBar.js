@@ -55,7 +55,7 @@ export default NavBar;
 
 const styles = {
     navBarContainer: {
-        backgroundColor: COLOR.MINT_GREEN
+        backgroundColor: 'white', //COLOR.MINT_GREEN
     },
     headerText: {
         fontSize: 24,

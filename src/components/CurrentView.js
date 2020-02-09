@@ -1,6 +1,10 @@
-import React, { Component } from 'react';
-import AboutSection from './AboutSection';
+/**
+ * This is the component responsible for controllin the view to user
+ */
 
+import React, { Component } from 'react';
+import AboutSection from './sections/AboutSection';
+import ProjectSection from './sections/ProjectSection';
 
 
 export default class CurrentView extends Component {
@@ -16,9 +20,12 @@ export default class CurrentView extends Component {
     SwitchBodyViews = () => {
         if (this.state.About) {
             return (
-                <AboutSection/>
+                <div>
+                    <AboutSection />
+                    <ProjectSection />
+                </div>
             );
-            }
+        }
         else if (this.state.Projects) {
 
         }

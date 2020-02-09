@@ -2,6 +2,9 @@ import React from 'react';
 
 import NavBar from './components/NavBar';
 import CurrentView from './components/CurrentView';
+import * as COLOR from './constants/Colors';
+import AboutSection from './components/sections/AboutSection';
+import ProjectSection from './components/sections/ProjectSection';
 
 
 export default function App() {
@@ -9,7 +12,9 @@ export default function App() {
     <div>
       <NavBar />
       <div style={styles.container}>
-        <CurrentView />
+        {/* <CurrentView /> */}
+        <AboutSection/>
+        <ProjectSection/>
       </div>
     </div>
   );
@@ -18,9 +23,9 @@ export default function App() {
 const styles = {
   container: {
     display: 'flex',
-    flexDirection: 'row',
+    flexDirection: 'column',
     flex: 1,
-    backgroundColor: '#282c34',
+    backgroundColor: COLOR.MINT_GREEN,
     minHeight: '96vh',
     justifyContent: 'center',
     color: 'white',

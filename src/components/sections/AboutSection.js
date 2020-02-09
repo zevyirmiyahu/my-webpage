@@ -2,9 +2,11 @@ import React, { Component } from 'react';
 
 import { Container, Button, Avatar } from '@material-ui/core';
 
-import * as COLOR from '../constants/Colors';
-import ProfileImage from '../assets/desert-cover.jpg';
+import * as COLOR from '../../constants/Colors';
+import ProfileImage from '../../assets/desert-cover.jpg';
 
+
+const TEXT_COLOR = COLOR.DARK_GREY;
 
 export default class AboutSection extends Component {
     constructor(props) {
@@ -171,9 +173,7 @@ export default class AboutSection extends Component {
                     <Container maxWidth='lg'>
                         <this.TechSkillSection />
                     </Container>
-
                 </Container>
-
             </div>
         );
     }
@@ -189,22 +189,22 @@ const styles = {
         textAlign: 'center',
         fontSize: 50,
         fontWeight: '200',
-        color: 'white'
+        color: TEXT_COLOR
     },
     subheaderText: {
         fontSize: 35,
         fontWeight: '300',
-        color: 'white'
+        color: TEXT_COLOR
     },
     aboutText: {
         fontSize: 30,
         fontWeight: '200',
-        color: 'white'
+        color: TEXT_COLOR
     },
     techText: {
         fontSize: 20,
         fontWeight: '200',
-        color: 'white'
+        color: TEXT_COLOR
     },
     madeWith: {
         fontSize: 20,
