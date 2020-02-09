@@ -4,20 +4,20 @@ import CoverPhoto from '../assets/desert-cover.jpg';
 
 const CoverImage = () => {
     return (
-        // <div style={styles.image}>
-        //     <img src={CoverPhoto} style={{height: '50%'}} alt='Desert-Photo' />
-        // </div>
-        <body style={{backgroundImage: CoverPhoto}}></body>
+        <div style={styles.image}>
+            <img src={CoverPhoto} style={{ height: '50%' }} alt='Desert-Photo' />
+        </div>
     );
 }
 
 export default CoverImage;
 
-const styles= {
+const styles = {
     image: {
-        zIndex: -1,
-        position: 'absolute',
-        top: 0,
-        left: 0,
+     
+        // zIndex: -1,
+        // position: 'absolute',
+        // top: 0,
+        // left: 0,
     }
 }
