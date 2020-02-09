@@ -3,10 +3,8 @@ import React, { Component } from 'react';
 import { AppBar, Toolbar, Button } from '@material-ui/core';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
-import FiberManualRecordIcon from '@material-ui/icons/FiberManualRecord';
-import PersonIcon from '@material-ui/icons/Person';
-import WorkIcon from '@material-ui/icons/Work';
-import ContactMailIcon from '@material-ui/icons/ContactMail';
+
+import * as COLOR from '../constants/Colors';
 
 class NavBar extends Component {
 
@@ -40,8 +38,7 @@ class NavBar extends Component {
                         <this.spaceButtonBlock/>
                         <Button style={styles.button2}><LinkedInIcon/><this.spaceIconBlock/>LinkedIn</Button>
                         <this.spaceButtonBlock/>
-                        <Button style={styles.button2}><LinkedInIcon/><this.spaceIconBlock/>Resume</Button>
-                        
+                        <Button style={styles.button2}><LinkedInIcon/><this.spaceIconBlock/>Resume</Button> 
                     </div>
 
                 </Toolbar>
@@ -54,16 +51,16 @@ export default NavBar;
 
 const styles = {
     navBarContainer: {
-        backgroundColor: '#21ed9f' // mint green
+        backgroundColor: COLOR.MINT_GREEN
     },
     headerText: {
         fontSize: 24,
-        color: '#282c34', // dark grey
+        color: COLOR.DARK_GREY 
     },
     button: {
         // margin: '15%',
         fontSize: 16,
-        color: '#282c34' // dark grey
+        color: COLOR.DARK_GREY 
     },
     buttonGroup: {
         marginLeft: '5%',
@@ -75,8 +72,8 @@ const styles = {
         fontWeight: 'bold',
         fontSize: 16,
         borderRadius: 5,
-        color: '#21ed9f', // mint green
-        backgroundColor: '#282c34' // dark grey
+        color: COLOR.MINT_GREEN,
+        backgroundColor: COLOR.DARK_GREY 
     },
     buttonGroup2: {
         marginLeft: '5%',
@@ -89,6 +86,6 @@ const styles = {
     icon: {
         width: 30,
         height: 30,
-        color: '#282c34' // dark grey
+        color: COLOR.DARK_GREY 
     }
 }
