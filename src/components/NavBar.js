@@ -7,6 +7,9 @@ import DescriptionIcon from '@material-ui/icons/Description';
 
 import * as COLOR from '../constants/Colors';
 
+const GITHUB_PATH = 'https://zevyirmiyahu.github.io/';
+const LINKEDIN_PATH = '';
+
 class NavBar extends Component {
 
     // used to space buttons
@@ -35,9 +38,9 @@ class NavBar extends Component {
                     </div>
 
                     <div style={styles.buttonGroup2}>
-                        <Button style={styles.button2}><GitHubIcon/><this.spaceIconBlock/>GitHub</Button>
+                        <Button style={styles.button2} href={GITHUB_PATH}><GitHubIcon/><this.spaceIconBlock/>GitHub</Button>
                         <this.spaceButtonBlock/>
-                        <Button style={styles.button2}><LinkedInIcon/><this.spaceIconBlock/>LinkedIn</Button>
+                        <Button style={styles.button2} href={LINKEDIN_PATH}><LinkedInIcon/><this.spaceIconBlock/>LinkedIn</Button>
                         <this.spaceButtonBlock/>
                         <Button style={styles.button2}><DescriptionIcon/><this.spaceIconBlock/>Resume</Button> 
                     </div>
