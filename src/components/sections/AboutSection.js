@@ -1,6 +1,16 @@
 import React, { Component } from 'react';
 
-import { Container, Button, Avatar } from '@material-ui/core';
+import {
+    Container,
+    Button,
+    Avatar,
+    ExpansionPanel,
+    ExpansionPanelSummary,
+    ExpansionPanelDetails,
+    Typography,
+} from '@material-ui/core';
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+
 
 import * as COLOR from '../../constants/Colors';
 import ProfileImage from '../../assets/desert-cover.jpg';
@@ -78,8 +88,8 @@ export default class AboutSection extends Component {
         );
     }
 
-      // Button determines whether skils are shown
-      ShowEducationButton = () => {
+    // Button determines whether skils are shown
+    ShowEducationButton = () => {
         return (
             <Button
                 style={{ backgroundColor: COLOR.MINT_GREEN }}
@@ -162,6 +172,30 @@ export default class AboutSection extends Component {
         return (<hr style={{ borderWidth: 1, borderColor: COLOR.MINT_GREEN }}></hr>);
     }
 
+    TechExpansionPanel = () => {
+        return (
+            <div style={{position: 'absolute', zIndex: 2}}>
+                <Container maxWidth="xs">
+                    <ExpansionPanel>
+                        <ExpansionPanelSummary
+                            expandIcon={<ExpandMoreIcon />}
+                            aria-controls="panel1a-content"
+                            id="panel1a-header"
+                        >
+                            <Typography >Expansion Panel 1</Typography>
+                        </ExpansionPanelSummary>
+                        <ExpansionPanelDetails>
+                            <Typography>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
+                                sit amet blandit leo lobortis eget.
+              </Typography>
+                        </ExpansionPanelDetails>
+                    </ExpansionPanel>
+                </Container>
+            </div>
+        );
+    }
+
     render() {
         return (
             <div>
@@ -172,6 +206,7 @@ export default class AboutSection extends Component {
                     <this.TechSkillSectionHeader />
                     <Container maxWidth='lg'>
                         <this.TechSkillSection />
+                        <this.TechExpansionPanel />
                     </Container>
                 </Container>
             </div>
