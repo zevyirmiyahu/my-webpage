@@ -13,7 +13,7 @@ const Box = posed.div({
     // draggable: 'x',
     // dragBounds: { left: '0%', right: '1020%' },
     init: { scale: 1 },
-    hover: { scale: 1.8 },
+    hover: { scale: 1.6 },
     drag: { scale: 1.1 },
 });
 
@@ -23,19 +23,45 @@ export default class componentName extends Component {
         return (
             <Container maxWidth='md'>
                 <div style={{ display: 'flex', flexDirection: 'row' }}>
-                    <ICON.ANGULAR />
-                    <ICON.REACT />
-                    <ICON.REDUX />
-                    <ICON.BOOTSTRAP />
-                    <ICON.TYPESCRIPT />
-                    <ICON.JAVASCRIPT />
-                    <ICON.HTML />
-                    <ICON.CSS />
-                    <ICON.JAVA />
-                    <ICON.TOMCAT />
-                    <ICON.CSHAP />
-                    <ICON.C />
-                    <ICON.CPP />
+                    <Box style={styles.box}>
+                        <ICON.ANGULAR />
+                    </Box>
+                    <Box style={styles.box}>
+                        <ICON.REACT />
+                    </Box>
+                    <Box style={styles.box}>
+                        <ICON.REDUX />
+                    </Box>
+                    <Box style={styles.box}>
+                        <ICON.BOOTSTRAP />
+                    </Box>
+                    <Box style={styles.box}>
+                        <ICON.TYPESCRIPT />
+                    </Box>
+                    <Box style={styles.box}>
+                        <ICON.JAVASCRIPT />
+                    </Box>
+                    <Box style={styles.box}>
+                        <ICON.HTML />
+                    </Box>
+                    <Box style={styles.box}>
+                        <ICON.CSS />
+                    </Box>
+                    <Box style={styles.box}>
+                        <ICON.JAVA />
+                    </Box>
+                    <Box style={styles.box}>
+                        <ICON.TOMCAT />
+                    </Box>
+                    <Box style={styles.box}>
+                        <ICON.CSHAP />
+                    </Box>
+                    <Box style={styles.box}>
+                        <ICON.C />
+                    </Box>
+                    <Box style={styles.box}>
+                        <ICON.CPP />
+                    </Box>
                 </div>
                 <div style={{ display: 'flex', flexDirection: 'row' }}>
                     <Box style={styles.box}>

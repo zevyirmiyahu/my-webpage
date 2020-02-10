@@ -14,8 +14,8 @@ export default function App() {
       <div style={styles.container}>
         {/* <CurrentView /> */}
         <AboutSection/>
-        <ProjectSection/>
         <IconSection/>
+        <ProjectSection/>
       </div>
     </div>
   );
