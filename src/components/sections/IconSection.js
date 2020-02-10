@@ -22,6 +22,8 @@ export default class componentName extends Component {
     IconGroup = () => {
         return (
             <Container maxWidth='md'>
+                                <h1 style={{color: 'black'}}>Tech Stack at a Glance</h1>
+
                 <div style={{ display: 'flex', flexDirection: 'row' }}>
                     <Box style={styles.box}>
                         <ICON.ANGULAR />

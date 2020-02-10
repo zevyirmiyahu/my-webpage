@@ -208,7 +208,7 @@ const styles = {
         flexDirection: 'column',
         flex: 1,
         backgroundColor: COLOR.MINT_GREEN,
-        minHeight: '60vh',
+        minHeight: '90vh',
         paddingTop: 20,
         paddingBottom: 20,
         // justifyContent: 'center',
