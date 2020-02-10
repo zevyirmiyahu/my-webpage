@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import * as COLOR from '../../constants/Colors';
 import {
     Container,
     Button,
@@ -10,6 +9,8 @@ import {
     Typography,
 } from '@material-ui/core';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import * as COLOR from '../../constants/Colors';
+import * as ICON from '../../constants/Icons';
 
 
 const TEXT_COLOR = COLOR.MINT_GREEN;
@@ -107,11 +108,20 @@ export default class ProjectSection extends Component {
     TechSkillsSection = () => {
         return (
             <div>
-                {/* <div style={{ display: 'block', flexDirection: 'row' }}> */}
-                <p style={styles.subheaderText}>Tech Stack</p>
                 <this.Divider marginLeft={'15%'} marginRight={'5%'} />
                 <this.TechSkills />
                 <this.Divider marginLeft={'5%'} marginRight={'5%'} />
+            </div>
+        );
+    }
+
+    IconGroup = () => {
+        return (
+            <div style={{ display: 'flex', flexDirection: 'row' }}>
+                <ICON.REACT />
+                <ICON.ANGULAR />
+                <ICON.JAVA />
+                <ICON.CSHAP />
             </div>
         );
     }
@@ -121,11 +131,11 @@ export default class ProjectSection extends Component {
             <div style={styles.container}>
                 <Container maxWidth='lg'>
                     <p style={styles.subheaderText}>Projects</p>
-
-                    <this.TechSkillsSection />
+                    <p style={styles.subheaderText}>Tech Stack</p>
 
                     <Container maxWidth='md'>
-                        Skills go here
+                        <this.TechSkillsSection />
+                        <this.IconGroup />
                     </Container>
                 </Container>
             </div>

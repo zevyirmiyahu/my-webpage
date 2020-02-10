@@ -173,7 +173,7 @@ export default class AboutSection extends Component {
 
     TechExpansionPanel = () => {
         return (
-            <div style={{position: 'absolute', zIndex: 2}}>
+            <div style={{ position: 'absolute', zIndex: 2 }}>
                 <Container maxWidth="xs">
                     <ExpansionPanel>
                         <ExpansionPanelSummary
@@ -205,7 +205,6 @@ export default class AboutSection extends Component {
                     <this.TechSkillSectionHeader />
                     <Container maxWidth='lg'>
                         <this.TechSkillSection />
-                        <this.TechExpansionPanel />
                     </Container>
                 </Container>
             </div>
