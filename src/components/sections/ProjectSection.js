@@ -120,8 +120,17 @@ export default class ProjectSection extends Component {
             <div style={{ display: 'flex', flexDirection: 'row' }}>
                 <ICON.REACT />
                 <ICON.ANGULAR />
+                <ICON.TYPESCRIPT />
+                <ICON.JAVASCRIPT />
+                <ICON.HTML />
+                <ICON.CSS />
                 <ICON.JAVA />
                 <ICON.CSHAP />
+                <ICON.C />
+                <ICON.CPP />
+                <ICON.AWS />
+                <ICON.GIT />
+                <ICON.GITHUB />
             </div>
         );
     }
