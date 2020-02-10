@@ -119,33 +119,34 @@ export default class ProjectSection extends Component {
         return (
             <Container maxWidth='md'>
                 <div style={{ display: 'flex', flexDirection: 'row' }}>
-                    <ICON.REACT />
                     <ICON.ANGULAR />
+                    <ICON.REACT />
+                    <ICON.REDUX />
+                    <ICON.BOOTSTRAP />
                     <ICON.TYPESCRIPT />
                     <ICON.JAVASCRIPT />
                     <ICON.HTML />
                     <ICON.CSS />
                     <ICON.JAVA />
+                    <ICON.TOMCAT />
                     <ICON.CSHAP />
                     <ICON.C />
                     <ICON.CPP />
-                    <ICON.AWS />
-                    <ICON.GIT />
-                    <ICON.GITHUB />
-                    <ICON.WINDOWS />
-                    <ICON.LINUX />
                 </div>
                 <div style={{ display: 'flex', flexDirection: 'row' }}>
+                    <ICON.WINDOWS />
                     <ICON.MAC />
-                    <ICON.TOMCAT />
-                    <ICON.VIM />
+                    <ICON.LINUX />
                     <ICON.YARN />
                     <ICON.NPM />
-                    <ICON.REDUX />
-                    <ICON.SLACK />
-                    <ICON.BOOTSTRAP />
                     <ICON.ORACLE />
+                    <ICON.AWS />
                     <ICON.DOCKER />
+                    <ICON.GIT />
+                    <ICON.GITHUB />
+                    <ICON.VIM />
+                    <ICON.VS />
+                    <ICON.SLACK />
                 </div>
             </Container>
         );

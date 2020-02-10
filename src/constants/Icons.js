@@ -25,7 +25,7 @@ import npm_path from '../assets/icons/npm/npm-original-wordmark.svg';
 import vim_path from '../assets/icons/vim/vim-original.svg';
 import oracle_path from '../assets/icons/oracle/oracle-original.svg';
 import docker_path from '../assets/icons/docker/docker-original-wordmark.svg';
-
+import vs_path from '../assets/icons/visualstudio/visualstudio-plain.svg';
 
 const SIZE = { width: 50, height: 50 };
 
@@ -241,6 +241,14 @@ export const DOCKER = () => {
     return (
         <div style={styles.icon}>
             <img src={docker_path} style={SIZE} />
+        </div>
+    );
+}
+
+export const VS = () => {
+    return (
+        <div style={styles.icon}>
+            <img src={vs_path} style={SIZE} />
         </div>
     );
 }
