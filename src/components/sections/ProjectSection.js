@@ -7,10 +7,11 @@ import {
     ExpansionPanelSummary,
     ExpansionPanelDetails,
     Typography,
+    Paper,
 } from '@material-ui/core';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+
 import * as COLOR from '../../constants/Colors';
-import * as ICON from '../../constants/Icons';
 
 
 const TEXT_COLOR = COLOR.MINT_GREEN;
@@ -115,43 +116,6 @@ export default class ProjectSection extends Component {
         );
     }
 
-    IconGroup = () => {
-        return (
-            <Container maxWidth='md'>
-                <div style={{ display: 'flex', flexDirection: 'row' }}>
-                    <ICON.ANGULAR />
-                    <ICON.REACT />
-                    <ICON.REDUX />
-                    <ICON.BOOTSTRAP />
-                    <ICON.TYPESCRIPT />
-                    <ICON.JAVASCRIPT />
-                    <ICON.HTML />
-                    <ICON.CSS />
-                    <ICON.JAVA />
-                    <ICON.TOMCAT />
-                    <ICON.CSHAP />
-                    <ICON.C />
-                    <ICON.CPP />
-                </div>
-                <div style={{ display: 'flex', flexDirection: 'row' }}>
-                    <ICON.WINDOWS />
-                    <ICON.MAC />
-                    <ICON.LINUX />
-                    <ICON.YARN />
-                    <ICON.NPM />
-                    <ICON.ORACLE />
-                    <ICON.AWS />
-                    <ICON.DOCKER />
-                    <ICON.GIT />
-                    <ICON.GITHUB />
-                    <ICON.VIM />
-                    <ICON.VS />
-                    <ICON.SLACK />
-                </div>
-            </Container>
-        );
-    }
-
     render() {
         return (
             <div>
@@ -162,9 +126,6 @@ export default class ProjectSection extends Component {
                             <this.TechSkillsSection />
                         </Container>
                     </Container>
-                </div>
-                <div style={{ backgroundColor: 'white' }}>
-                    <this.IconGroup />
                 </div>
             </div>
         );

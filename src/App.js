@@ -5,7 +5,7 @@ import CurrentView from './components/CurrentView';
 import * as COLOR from './constants/Colors';
 import AboutSection from './components/sections/AboutSection';
 import ProjectSection from './components/sections/ProjectSection';
-
+import IconSection from './components/sections/IconSection';
 
 export default function App() {
   return (
@@ -15,6 +15,7 @@ export default function App() {
         {/* <CurrentView /> */}
         <AboutSection/>
         <ProjectSection/>
+        <IconSection/>
       </div>
     </div>
   );
