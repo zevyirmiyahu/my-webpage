@@ -117,36 +117,54 @@ export default class ProjectSection extends Component {
 
     IconGroup = () => {
         return (
-            <div style={{ display: 'flex', flexDirection: 'row' }}>
-                <ICON.REACT />
-                <ICON.ANGULAR />
-                <ICON.TYPESCRIPT />
-                <ICON.JAVASCRIPT />
-                <ICON.HTML />
-                <ICON.CSS />
-                <ICON.JAVA />
-                <ICON.CSHAP />
-                <ICON.C />
-                <ICON.CPP />
-                <ICON.AWS />
-                <ICON.GIT />
-                <ICON.GITHUB />
-            </div>
+            <Container maxWidth='md'>
+                <div style={{ display: 'flex', flexDirection: 'row' }}>
+                    <ICON.REACT />
+                    <ICON.ANGULAR />
+                    <ICON.TYPESCRIPT />
+                    <ICON.JAVASCRIPT />
+                    <ICON.HTML />
+                    <ICON.CSS />
+                    <ICON.JAVA />
+                    <ICON.CSHAP />
+                    <ICON.C />
+                    <ICON.CPP />
+                    <ICON.AWS />
+                    <ICON.GIT />
+                    <ICON.GITHUB />
+                    <ICON.WINDOWS />
+                    <ICON.LINUX />
+                </div>
+                <div style={{ display: 'flex', flexDirection: 'row' }}>
+                    <ICON.MAC />
+                    <ICON.TOMCAT />
+                    <ICON.VIM />
+                    <ICON.YARN />
+                    <ICON.NPM />
+                    <ICON.REDUX />
+                    <ICON.SLACK />
+                    <ICON.BOOTSTRAP />
+                    <ICON.ORACLE />
+                    <ICON.DOCKER />
+                </div>
+            </Container>
         );
     }
 
     render() {
         return (
-            <div style={styles.container}>
-                <Container maxWidth='lg'>
-                    <p style={styles.subheaderText}>Projects</p>
-                    <p style={styles.subheaderText}>Tech Stack</p>
-
-                    <Container maxWidth='md'>
-                        <this.TechSkillsSection />
-                        <this.IconGroup />
+            <div>
+                <div style={styles.container}>
+                    <Container maxWidth='lg'>
+                        <p style={styles.subheaderText}>Tech Stack</p>
+                        <Container maxWidth='md'>
+                            <this.TechSkillsSection />
+                        </Container>
                     </Container>
-                </Container>
+                </div>
+                <div style={{ backgroundColor: 'white' }}>
+                    <this.IconGroup />
+                </div>
             </div>
         );
     }
@@ -159,7 +177,8 @@ const styles = {
         flex: 1,
         backgroundColor: COLOR.DARK_GREY,
         // minHeight: '96vh',
-        paddingTop: 150,
+        paddingTop: 20,
+        paddingBottom: 20,
         // justifyContent: 'center',
         color: 'white',
     },

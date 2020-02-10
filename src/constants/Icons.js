@@ -12,6 +12,20 @@ import typescript_path from '../assets/icons/typescript/typescript-original.svg'
 import aws_path from '../assets/icons/amazonwebservices/amazonwebservices-original-wordmark.svg';
 import git_path from '../assets/icons/git/git-original-wordmark.svg';
 import github_path from '../assets/icons/github/github-original-wordmark.svg';
+import linux_path from '../assets/icons/linux/linux-original.svg';
+import mac_path from '../assets/icons/apple/apple-original.svg';
+import windows_path from '../assets/icons/windows8/windows8-original.svg';
+import ruby_path from '../assets/icons/ruby/ruby-original.svg';
+import bootstrap_path from '../assets/icons/bootstrap/bootstrap-plain-wordmark.svg';
+import tomcat_path from '../assets/icons/tomcat/tomcat-original.svg';
+import redux_path from '../assets/icons/redux/redux-original.svg';
+import slack_path from '../assets/icons/slack/slack-original-wordmark.svg';
+import yarn_path from '../assets/icons/yarn/yarn-original-wordmark.svg';
+import npm_path from '../assets/icons/npm/npm-original-wordmark.svg';
+import vim_path from '../assets/icons/vim/vim-original.svg';
+import oracle_path from '../assets/icons/oracle/oracle-original.svg';
+import docker_path from '../assets/icons/docker/docker-original-wordmark.svg';
+
 
 const SIZE = { width: 50, height: 50 };
 
@@ -127,7 +141,109 @@ export const GITHUB = () => {
     );
 }
 
+export const LINUX = () => {
+    return (
+        <div style={styles.icon}>
+            <img src={linux_path} style={SIZE} />
+        </div>
+    );
+}
 
+export const WINDOWS = () => {
+    return (
+        <div style={styles.icon}>
+            <img src={windows_path} style={SIZE} />
+        </div>
+    );
+}
+
+export const MAC = () => {
+    return (
+        <div style={styles.icon}>
+            <img src={mac_path} style={SIZE} />
+        </div>
+    );
+}
+
+export const BOOTSTRAP = () => {
+    return (
+        <div style={styles.icon}>
+            <img src={bootstrap_path} style={SIZE} />
+        </div>
+    );
+}
+
+export const RUBY = () => {
+    return (
+        <div style={styles.icon}>
+            <img src={ruby_path} style={SIZE} />
+        </div>
+    );
+}
+
+export const TOMCAT = () => {
+    return (
+        <div style={styles.icon}>
+            <img src={tomcat_path} style={SIZE} />
+        </div>
+    );
+}
+
+export const REDUX = () => {
+    return (
+        <div style={styles.icon}>
+            <img src={redux_path} style={SIZE} />
+        </div>
+    );
+}
+
+export const SLACK = () => {
+    return (
+        <div style={styles.icon}>
+            <img src={slack_path} style={SIZE} />
+        </div>
+    );
+}
+
+export const VIM = () => {
+    return (
+        <div style={styles.icon}>
+            <img src={vim_path} style={SIZE} />
+        </div>
+    );
+}
+
+export const YARN = () => {
+    return (
+        <div style={styles.icon}>
+            <img src={yarn_path} style={SIZE} />
+        </div>
+    );
+}
+
+export const NPM = () => {
+    return (
+        <div style={styles.icon}>
+            <img src={npm_path} style={SIZE} />
+        </div>
+    );
+}
+
+export const ORACLE = () => {
+    return (
+        <div style={styles.icon}>
+            <img src={oracle_path} style={SIZE} />
+        </div>
+    );
+}
+
+export const DOCKER = () => {
+    return (
+        <div style={styles.icon}>
+            <img src={docker_path} style={SIZE} />
+        </div>
+    );
+}
 
 const styles = {
     icon: {
