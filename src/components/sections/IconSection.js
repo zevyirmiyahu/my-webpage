@@ -22,7 +22,7 @@ export default class componentName extends Component {
     IconGroup = () => {
         return (
             <Container maxWidth='md'>
-                                <h1 style={{color: 'black'}}>Tech Stack at a Glance</h1>
+                <h1 style={{ color: 'black' }}>Tech Stack at a Glance</h1>
 
                 <div style={{ display: 'flex', flexDirection: 'row' }}>
                     <Box style={styles.box}>
@@ -55,6 +55,8 @@ export default class componentName extends Component {
                     <Box style={styles.box}>
                         <ICON.TOMCAT />
                     </Box>
+                </div>
+                <div style={{ display: 'flex', flexDirection: 'row' }}>
                     <Box style={styles.box}>
                         <ICON.CSHAP />
                     </Box>
@@ -64,8 +66,6 @@ export default class componentName extends Component {
                     <Box style={styles.box}>
                         <ICON.CPP />
                     </Box>
-                </div>
-                <div style={{ display: 'flex', flexDirection: 'row' }}>
                     <Box style={styles.box}>
                         <ICON.WINDOWS />
                     </Box>
@@ -87,6 +87,8 @@ export default class componentName extends Component {
                     <Box style={styles.box}>
                         <ICON.AWS />
                     </Box>
+                </div>
+                <div style={{ display: 'flex', flexDirection: 'row' }}>
                     <Box style={styles.box}>
                         <ICON.DOCKER />
                     </Box>
@@ -106,6 +108,7 @@ export default class componentName extends Component {
                         <ICON.SLACK />
                     </Box>
                 </div>
+                <hr/>
             </Container>
         );
     }

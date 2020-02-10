@@ -11,7 +11,7 @@ import {
     Paper
 } from '@material-ui/core';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-
+import Typist from 'react-typist';
 
 import * as COLOR from '../../constants/Colors';
 import ProfileImage from '../../assets/desert-cover.jpg';
@@ -34,7 +34,16 @@ export default class AboutSection extends Component {
     }
 
     Header = () => {
-        return <p style={styles.headerText}> {`<Code is law .../>`} </p>
+        return (
+                <Typist
+                    avgTypingDelay={200}
+                    show={true}
+                    blink={true}
+                    element='|'
+                >
+                    <p style={styles.headerText}> {`<Code is law ... />`} </p>
+                </Typist>
+        );
     }
 
     Subheader = () => {
@@ -187,7 +196,7 @@ export default class AboutSection extends Component {
 
     render() {
         return (
-            <div style= {styles.container}>
+            <div style={styles.container}>
                 <this.Header />
                 <Container maxWidth="lg">
                     <this.About />
@@ -222,7 +231,7 @@ const styles = {
     headerText: {
         textAlign: 'center',
         fontSize: 50,
-        fontWeight: '200',
+        fontWeight: '300',
         color: TEXT_COLOR
     },
     subheaderText: {
@@ -231,6 +240,7 @@ const styles = {
         color: TEXT_COLOR
     },
     aboutText: {
+        paddingBottom: 80,
         fontSize: 30,
         fontWeight: '200',
         color: TEXT_COLOR

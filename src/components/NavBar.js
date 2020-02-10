@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { AppBar, Toolbar, Button } from '@material-ui/core';
+import { AppBar, Toolbar, Button, Divider } from '@material-ui/core';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import DescriptionIcon from '@material-ui/icons/Description';
@@ -19,7 +19,18 @@ class NavBar extends Component {
 
     // used to space icons and font inside buttons
     spaceIconBlock = () => {
-        return  <div style={{ padding: 5 }}></div>
+        return <div style={{ padding: 5 }}></div>
+    }
+
+    LanguageDivider = () => {
+        return (
+            <p style={{ 
+                fontSize: 20, 
+                fontWeight: '500',
+                color: COLOR.DARK_GREY, 
+                paddingBottom: 5 
+            }}>|</p>
+        );
     }
 
     render() {
@@ -38,11 +49,15 @@ class NavBar extends Component {
                     </div>
 
                     <div style={styles.buttonGroup2}>
-                        <Button style={styles.button2} href={GITHUB_PATH}><GitHubIcon/><this.spaceIconBlock/>GitHub</Button>
+                        <Button style={styles.button}>English</Button>
+                        <this.LanguageDivider/>
+                        <Button style={styles.button}>Deutsch</Button>
+
+                        {/* <Button style={styles.button2} href={GITHUB_PATH}><GitHubIcon/><this.spaceIconBlock/>GitHub</Button>
                         <this.spaceButtonBlock/>
                         <Button style={styles.button2} href={LINKEDIN_PATH}><LinkedInIcon/><this.spaceIconBlock/>LinkedIn</Button>
                         <this.spaceButtonBlock/>
-                        <Button style={styles.button2}><DescriptionIcon/><this.spaceIconBlock/>Resume</Button> 
+                        <Button style={styles.button2}><DescriptionIcon/><this.spaceIconBlock/>Resume</Button>  */}
                     </div>
 
                 </Toolbar>
@@ -59,12 +74,12 @@ const styles = {
     },
     headerText: {
         fontSize: 24,
-        color: COLOR.DARK_GREY 
+        color: COLOR.DARK_GREY
     },
     button: {
         // margin: '15%',
         fontSize: 16,
-        color: COLOR.DARK_GREY 
+        color: COLOR.DARK_GREY
     },
     buttonGroup: {
         marginLeft: '5%',
@@ -77,7 +92,7 @@ const styles = {
         fontSize: 16,
         borderRadius: 5,
         color: COLOR.MINT_GREEN,
-        backgroundColor: COLOR.DARK_GREY 
+        backgroundColor: COLOR.DARK_GREY
     },
     buttonGroup2: {
         marginLeft: '5%',
@@ -90,6 +105,6 @@ const styles = {
     icon: {
         width: 30,
         height: 30,
-        color: COLOR.DARK_GREY 
+        color: COLOR.DARK_GREY
     }
 }
