@@ -101,14 +101,6 @@ export default class AboutSection extends Component {
         );
     }
 
-    MadeWith = () => {
-        return (
-            <div style={styles.madeWith}>
-                <p>Built with ReactJS</p>
-            </div>
-        );
-    }
-
     TechSkillSectionHeader = () => {
         return (
             <div style={{ display: 'flex', flexDirection: 'row' }}>
@@ -123,9 +115,6 @@ export default class AboutSection extends Component {
                     <span style={{ fontWeight: '500', paddingRight: 15 }}>Education:</span>
                     <this.ShowEducationButton />
                 </p>
-
-                <this.MadeWith />
-
             </div>
         );
     }
@@ -198,15 +187,15 @@ export default class AboutSection extends Component {
 
     render() {
         return (
-            <div>
+            <div style= {styles.container}>
                 <this.Header />
                 <Container maxWidth="lg">
                     <this.About />
                     <this.Divider />
-                    <this.TechSkillSectionHeader />
+                    {/* <this.TechSkillSectionHeader />
                     <Container maxWidth='lg'>
                         <this.TechSkillSection />
-                    </Container>
+                    </Container> */}
                 </Container>
             </div>
         );
@@ -214,6 +203,17 @@ export default class AboutSection extends Component {
 }
 
 const styles = {
+    container: {
+        display: 'flex',
+        flexDirection: 'column',
+        flex: 1,
+        backgroundColor: COLOR.MINT_GREEN,
+        minHeight: '60vh',
+        paddingTop: 20,
+        paddingBottom: 20,
+        // justifyContent: 'center',
+        color: 'white',
+    },
     headerContainer: {
         display: 'flex',
         flexDirection: 'column',
@@ -239,12 +239,5 @@ const styles = {
         fontSize: 20,
         fontWeight: '200',
         color: TEXT_COLOR
-    },
-    madeWith: {
-        fontSize: 20,
-        fontWeight: '200',
-        display: 'flex',
-        marginLeft: 'auto',
-        color: COLOR.MINT_GREEN
     }
 }
