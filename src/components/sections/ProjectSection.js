@@ -135,6 +135,10 @@ export default class ProjectSection extends Component {
                         <div style={{ textAlign: 'right' }}>
                             <this.GitHubButton />
                         </div>
+                        <div style={{paddingTop: 40, paddingBottom: 80}}>
+
+                        <hr />
+                        </div>
                     </Container>
                 </Container>
             </div>

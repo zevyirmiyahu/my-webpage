@@ -47,7 +47,7 @@ export default class AboutSection extends Component {
     }
 
     Subheader = () => {
-        return <p style={styles.subheaderText}>About</p>
+        return <h1 style={{color: COLOR.DARK_GREY}}>About</h1>
     }
 
     About = () => {
