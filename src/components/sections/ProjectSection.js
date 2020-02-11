@@ -11,6 +11,8 @@ import {
 } from '@material-ui/core';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import ParticleEffectButton from 'react-particle-effect-button'
+
 
 import * as COLOR from '../../constants/Colors';
 
@@ -19,7 +21,9 @@ const TEXT_COLOR = COLOR.MINT_GREEN;
 const GITHUB_PATH = 'https://zevyirmiyahu.github.io/';
 
 export default class ProjectSection extends Component {
-
+    state = {
+        githubHidden: false // initiates GitHub button disintigration on true
+    }
 
     TechSkills_Col1 = () => {
         return (
@@ -110,6 +114,17 @@ export default class ProjectSection extends Component {
         return <div style={{ padding: 5 }}></div>
     }
 
+    GitHubButton = () => {
+        return (
+            <ParticleEffectButton
+                color={COLOR.MINT_GREEN}
+                hidden={this.state.githubHidden}
+            >
+                <Button onClick={() => this.setState({ githubHidden: true })} style={styles.button}><GitHubIcon /><this.spaceIconBlock />GitHub</Button>
+            </ParticleEffectButton>
+        );
+    }
+
     render() {
         return (
             <div style={styles.container}>
@@ -118,7 +133,7 @@ export default class ProjectSection extends Component {
                     <Container maxWidth='md'>
                         <this.ProjectDescription />
                         <div style={{ textAlign: 'right' }}>
-                            <Button style={styles.button} href={GITHUB_PATH}><GitHubIcon /><this.spaceIconBlock />GitHub</Button>
+                            <this.GitHubButton />
                         </div>
                     </Container>
                 </Container>
