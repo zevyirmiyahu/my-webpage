@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 
 import { AppBar, Toolbar, Button, Divider } from '@material-ui/core';
+import TranslateIcon from '@material-ui/icons/Translate';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import DescriptionIcon from '@material-ui/icons/Description';
@@ -24,12 +25,22 @@ class NavBar extends Component {
 
     LanguageDivider = () => {
         return (
-            <p style={{ 
-                fontSize: 20, 
+            <p style={{
+                fontSize: 20,
                 fontWeight: '500',
-                color: COLOR.DARK_GREY, 
-                paddingBottom: 5 
+                color: COLOR.DARK_GREY,
+                paddingBottom: 5
             }}>|</p>
+        );
+    }
+
+    LanguageIcon = () => {
+        return (
+            <TranslateIcon style={{
+                color: COLOR.DARK_GREY,
+                paddingTop: 21,
+                paddingRight: 5,
+            }} />
         );
     }
 
@@ -45,12 +56,15 @@ class NavBar extends Component {
                         <this.spaceButtonBlock />
                         <Button style={styles.button}>Projects</Button>
                         <this.spaceButtonBlock />
+                        <Button style={styles.button}>Resume</Button>
+                        <this.spaceButtonBlock />
                         <Button style={styles.button}>Contact</Button>
                     </div>
 
                     <div style={styles.buttonGroup2}>
+                        <this.LanguageIcon />
                         <Button style={styles.button}>English</Button>
-                        <this.LanguageDivider/>
+                        <this.LanguageDivider />
                         <Button style={styles.button}>Deutsch</Button>
 
                         {/* <Button style={styles.button2} href={GITHUB_PATH}><GitHubIcon/><this.spaceIconBlock/>GitHub</Button>

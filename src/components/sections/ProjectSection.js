@@ -9,12 +9,14 @@ import {
     Typography,
     Paper,
 } from '@material-ui/core';
+import GitHubIcon from '@material-ui/icons/GitHub';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 import * as COLOR from '../../constants/Colors';
 
 
 const TEXT_COLOR = COLOR.MINT_GREEN;
+const GITHUB_PATH = 'https://zevyirmiyahu.github.io/';
 
 export default class ProjectSection extends Component {
 
@@ -74,30 +76,6 @@ export default class ProjectSection extends Component {
         );
     }
 
-    TechExpansionPanel = () => {
-        return (
-            <div style={{ position: 'absolute', zIndex: 2 }}>
-                <Container maxWidth="xs">
-                    <ExpansionPanel>
-                        <ExpansionPanelSummary
-                            expandIcon={<ExpandMoreIcon />}
-                            aria-controls="panel1a-content"
-                            id="panel1a-header"
-                        >
-                            <Typography >Expansion Panel 1</Typography>
-                        </ExpansionPanelSummary>
-                        <ExpansionPanelDetails>
-                            <Typography>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
-                                sit amet blandit leo lobortis eget.
-              </Typography>
-                        </ExpansionPanelDetails>
-                    </ExpansionPanel>
-                </Container>
-            </div>
-        );
-    }
-
     Divider = (left, right) => {
         return (
             <div>
@@ -116,17 +94,34 @@ export default class ProjectSection extends Component {
         );
     }
 
-    render() {
+    ProjectDescription = () => {
         return (
             <div>
-                <div style={styles.container}>
-                    <Container maxWidth='lg'>
-                        <p style={styles.subheaderText}>Tech Stack</p>
-                        <Container maxWidth='md'>
-                            <this.TechSkillsSection />
-                        </Container>
+                <p style={styles.projectDescription}>I enjoy learning new programming languages, frameworks and libraries, whether it's front-end or back-end, I'm married to the game and I love her from head to toe.
+                </p>
+                <p style={styles.projectDescription}>My programming portfolio is hosted on GitHub <GitHubIcon style={{ color: 'white' }} />. It has everything from games written in pure Java to blockchains written in JavaScript, oh my! Enjoy.
+                </p>
+            </div>
+        );
+    }
+
+    // used to space icons and font inside buttons
+    spaceIconBlock = () => {
+        return <div style={{ padding: 5 }}></div>
+    }
+
+    render() {
+        return (
+            <div style={styles.container}>
+                <Container maxWidth='lg'>
+                    <h1 style={{ color: 'white' }}>Projects</h1>
+                    <Container maxWidth='md'>
+                        <this.ProjectDescription />
+                        <div style={{ textAlign: 'right' }}>
+                            <Button style={styles.button} href={GITHUB_PATH}><GitHubIcon /><this.spaceIconBlock />GitHub</Button>
+                        </div>
                     </Container>
-                </div>
+                </Container>
             </div>
         );
     }
@@ -148,17 +143,33 @@ const styles = {
         textAlign: 'center',
         fontSize: 50,
         fontWeight: '200',
-        color: TEXT_COLOR
+        color: 'TEXT_COLOR'
     },
     subheaderText: {
         fontSize: 35,
         fontWeight: '300',
-        color: TEXT_COLOR
+        color: 'white'
     },
     techText: {
         fontSize: 20,
         fontWeight: '200',
-        color: TEXT_COLOR
+        color: 'white'
     },
-
+    projectDescription: {
+        paddingBottom: 10,
+        fontSize: 30,
+        fontWeight: '200',
+        color: 'white'
+    },
+    button: {
+        backgroundColor: COLOR.MINT_GREEN,
+        padding: 20,
+        fontSize: 16,
+        // marginLeft: '5%',
+        // marginTop: '0.4%',
+        // display: 'flex',
+        // flexDirection: 'row',
+        // position: 'absolute',
+        // right: '5%'  ,
+    },
 };

@@ -6,6 +6,7 @@ import * as COLOR from './constants/Colors';
 import AboutSection from './components/sections/AboutSection';
 import ProjectSection from './components/sections/ProjectSection';
 import IconSection from './components/sections/IconSection';
+import TechSection from './components/sections/TechSection';
 
 export default function App() {
   return (
@@ -13,9 +14,10 @@ export default function App() {
       <NavBar />
       <div style={styles.container}>
         {/* <CurrentView /> */}
-        <AboutSection/>
-        <IconSection/>
-        <ProjectSection/>
+        <AboutSection />
+        <ProjectSection />
+        <IconSection />
+        <TechSection />
       </div>
     </div>
   );

@@ -22,7 +22,7 @@ export default class componentName extends Component {
     IconGroup = () => {
         return (
             <Container maxWidth='md'>
-                <h1 style={{ color: 'black' }}>Tech Stack at a Glance</h1>
+                <h1 style={{ color: COLOR.DARK_GREY }}>Tech Stack at a Glance</h1>
 
                 <div style={{ display: 'flex', flexDirection: 'row' }}>
                     <Box style={styles.box}>
@@ -131,7 +131,7 @@ const styles = {
         backgroundColor: 'white',
         // minHeight: '96vh',
         paddingTop: 20,
-        paddingBottom: 20,
+        paddingBottom: 40,
         // justifyContent: 'center',
         color: 'white',
     },
