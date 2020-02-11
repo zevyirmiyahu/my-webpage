@@ -50,10 +50,10 @@ export default class componentName extends Component {
                         <ICON.CSS />
                     </Box>
                     <Box style={styles.box}>
-                        <ICON.JAVA />
+                        <ICON.YARN />
                     </Box>
                     <Box style={styles.box}>
-                        <ICON.TOMCAT />
+                        <ICON.NPM />
                     </Box>
                 </div>
                 <div style={{ display: 'flex', flexDirection: 'row' }}>
@@ -67,6 +67,18 @@ export default class componentName extends Component {
                         <ICON.CPP />
                     </Box>
                     <Box style={styles.box}>
+                        <ICON.JAVA />
+                    </Box>
+                    <Box style={styles.box}>
+                        <ICON.SPRING />
+                    </Box>
+                    <Box style={styles.box}>
+                        <ICON.TOMCAT />
+                    </Box>
+                    <Box style={styles.box}>
+                        <ICON.ORACLE />
+                    </Box>
+                    <Box style={styles.box}>
                         <ICON.WINDOWS />
                     </Box>
                     <Box style={styles.box}>
@@ -75,20 +87,11 @@ export default class componentName extends Component {
                     <Box style={styles.box}>
                         <ICON.LINUX />
                     </Box>
-                    <Box style={styles.box}>
-                        <ICON.YARN />
-                    </Box>
-                    <Box style={styles.box}>
-                        <ICON.NPM />
-                    </Box>
-                    <Box style={styles.box}>
-                        <ICON.ORACLE />
-                    </Box>
+                </div>
+                <div style={{ display: 'flex', flexDirection: 'row' }}>
                     <Box style={styles.box}>
                         <ICON.AWS />
                     </Box>
-                </div>
-                <div style={{ display: 'flex', flexDirection: 'row' }}>
                     <Box style={styles.box}>
                         <ICON.DOCKER />
                     </Box>
@@ -110,7 +113,6 @@ export default class componentName extends Component {
                     <Box style={styles.box}>
                         <ICON.SLACK />
                     </Box>
-                    
                 </div>
                 <hr/>
             </Container>
