@@ -28,6 +28,10 @@ import docker_path from '../assets/icons/docker/docker-original-wordmark.svg';
 import vs_path from '../assets/icons/visualstudio/visualstudio-plain.svg';
 import eclipse_path from '../assets/eclipse-original.png';
 import spring_path from '../assets/spring-original.svg';
+import cpu_path from '../assets/cpu.svg';
+import keyboard_path from '../assets/keyboard.svg';
+import mouse_path from '../assets/mouse.svg';
+import monitor_path from '../assets/monitor.svg';
 
 
 const SIZE = { width: 50, height: 50 };
@@ -268,6 +272,38 @@ export const SPRING = () => {
     return (
         <div style={styles.icon}>
             <img src={spring_path} style={SIZE} />
+        </div>
+    );
+}
+
+export const CPU = () => {
+    return (
+        <div style={styles.icon}>
+            <img src={cpu_path} style={SIZE} />
+        </div>
+    );
+}
+
+export const KEYBOARD = () => {
+    return (
+        <div style={styles.icon}>
+            <img src={keyboard_path} style={SIZE} />
+        </div>
+    );
+}
+
+export const MONITOR = () => {
+    return (
+        <div style={styles.icon}>
+            <img src={monitor_path} style={SIZE} />
+        </div>
+    );
+}
+
+export const MOUSE = () => {
+    return (
+        <div style={styles.icon}>
+            <img src={mouse_path} style={SIZE} />
         </div>
     );
 }

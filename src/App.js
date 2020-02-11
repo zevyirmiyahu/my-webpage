@@ -1,13 +1,14 @@
 import React from 'react';
 
-import NavBar from './components/NavBar';
+import { ParallaxProvider } from 'react-scroll-parallax';
 import CurrentView from './components/CurrentView';
 import * as COLOR from './constants/Colors';
+import NavBar from './components/NavBar';
 import AboutSection from './components/sections/AboutSection';
 import ProjectSection from './components/sections/ProjectSection';
 import IconSection from './components/sections/IconSection';
 import TechSection from './components/sections/TechSection';
-import { ParallaxProvider } from 'react-scroll-parallax';
+import ContactSection from './components/sections/ContactSection';
 
 export default function App() {
   return (
@@ -20,6 +21,7 @@ export default function App() {
           <ProjectSection />
           <IconSection />
           <TechSection />
+          <ContactSection />
         </div>
       </div>
     </ParallaxProvider>
