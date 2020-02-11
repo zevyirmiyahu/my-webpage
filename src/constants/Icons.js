@@ -26,6 +26,7 @@ import vim_path from '../assets/icons/vim/vim-original.svg';
 import oracle_path from '../assets/icons/oracle/oracle-original.svg';
 import docker_path from '../assets/icons/docker/docker-original-wordmark.svg';
 import vs_path from '../assets/icons/visualstudio/visualstudio-plain.svg';
+import eclipse_path from '../assets/eclipse-original.png';
 
 const SIZE = { width: 50, height: 50 };
 
@@ -249,6 +250,14 @@ export const VS = () => {
     return (
         <div style={styles.icon}>
             <img src={vs_path} style={SIZE} />
+        </div>
+    );
+}
+
+export const ECLIPSE = () => {
+    return (
+        <div style={styles.icon}>
+            <img src={eclipse_path} style={SIZE} />
         </div>
     );
 }

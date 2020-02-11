@@ -105,8 +105,12 @@ export default class componentName extends Component {
                         <ICON.VS />
                     </Box>
                     <Box style={styles.box}>
+                        <ICON.ECLIPSE />
+                    </Box>
+                    <Box style={styles.box}>
                         <ICON.SLACK />
                     </Box>
+                    
                 </div>
                 <hr/>
             </Container>
