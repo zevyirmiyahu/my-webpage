@@ -15,6 +15,7 @@ import ParticleEffectButton from 'react-particle-effect-button'
 
 
 import * as COLOR from '../../constants/Colors';
+import { Parallax } from 'react-scroll-parallax';
 
 
 const TEXT_COLOR = COLOR.MINT_GREEN;
@@ -101,10 +102,14 @@ export default class ProjectSection extends Component {
     ProjectDescription = () => {
         return (
             <div>
-                <p style={styles.projectDescription}>I enjoy learning new programming languages, frameworks and libraries, whether it's front-end or back-end, I'm married to the game and I love her from head to toe.
-                </p>
-                <p style={styles.projectDescription}>My programming portfolio is hosted on GitHub <GitHubIcon style={{ color: 'white' }} />. It has everything from games written in pure Java to blockchains written in JavaScript, oh my! Enjoy.
-                </p>
+                <Parallax x={['-50px', '50px']}>
+                    <p style={styles.projectDescription}>I enjoy learning new programming languages, frameworks and libraries, whether it's front-end or back-end, I'm married to the game and I love her from head to toe.
+                    </p>
+                </Parallax>
+                <Parallax x={['90px', '-90px']} y={['20px', '-60px']}>
+                    <p style={styles.projectDescription}>My programming portfolio is hosted on GitHub <GitHubIcon style={{ color: 'white' }} />. It has everything from games written in pure Java to blockchains written in JavaScript, oh my! Enjoy.
+                    </p>
+                </Parallax>
             </div>
         );
     }
@@ -116,12 +121,15 @@ export default class ProjectSection extends Component {
 
     GitHubButton = () => {
         return (
-            <ParticleEffectButton
-                color={COLOR.MINT_GREEN}
-                hidden={this.state.githubHidden}
-            >
-                <Button onClick={() => this.setState({ githubHidden: true })} style={styles.button}><GitHubIcon /><this.spaceIconBlock />GitHub</Button>
-            </ParticleEffectButton>
+            <Parallax x={['130px', '-130px']}>
+                <ParticleEffectButton
+                    color={COLOR.MINT_GREEN}
+                    hidden={this.state.githubHidden}
+                >
+                    <Button onClick={() => this.setState({ githubHidden: true })} style={styles.button}><GitHubIcon /><this.spaceIconBlock />GitHub</Button>
+                </ParticleEffectButton>
+
+            </Parallax>
         );
     }
 
@@ -129,15 +137,16 @@ export default class ProjectSection extends Component {
         return (
             <div style={styles.container}>
                 <Container maxWidth='lg'>
-                    <h1 style={{ color: 'white' }}>Projects</h1>
+                    <Parallax x={['-60px', '60px']}>
+                        <h1 style={{ color: 'white' }}>Projects</h1>
+                    </Parallax>
                     <Container maxWidth='md'>
                         <this.ProjectDescription />
                         <div style={{ textAlign: 'right' }}>
                             <this.GitHubButton />
                         </div>
-                        <div style={{paddingTop: 40, paddingBottom: 80}}>
-
-                        <hr />
+                        <div style={{ paddingTop: 40, paddingBottom: 80 }}>
+                            <hr />
                         </div>
                     </Container>
                 </Container>
@@ -152,10 +161,10 @@ const styles = {
         flexDirection: 'column',
         flex: 1,
         backgroundColor: COLOR.DARK_GREY,
-        // minHeight: '96vh',
-        paddingTop: 20,
-        paddingBottom: 20,
-        // justifyContent: 'center',
+        minHeight: '96vh',
+        // paddingTop: 40,
+        // paddingBottom: 20,
+        justifyContent: 'center',
         color: 'white',
     },
     headerText: {

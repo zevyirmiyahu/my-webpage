@@ -15,6 +15,7 @@ import Typist from 'react-typist';
 
 import * as COLOR from '../../constants/Colors';
 import ProfileImage from '../../assets/desert-cover.jpg';
+import { Parallax } from 'react-scroll-parallax';
 
 
 const TEXT_COLOR = COLOR.DARK_GREY;
@@ -35,32 +36,50 @@ export default class AboutSection extends Component {
 
     Header = () => {
         return (
-                <Typist
-                    avgTypingDelay={200}
-                    show={true}
-                    blink={true}
-                    element='|'
-                >
-                    <p style={styles.headerText}> {`<Code is law ... />`} </p>
-                </Typist>
+            <Typist
+                avgTypingDelay={200}
+                show={true}
+                blink={true}
+                element='|'
+            >
+                <p style={styles.headerText}> {`<Code is law ... />`} </p>
+            </Typist>
         );
     }
 
     Subheader = () => {
-        return <h1 style={{color: COLOR.DARK_GREY}}>About</h1>
+        return(
+        <Parallax y={[40, -90]}>
+            <h1 style={{ color: COLOR.DARK_GREY }}>About</h1>
+        </Parallax>
+        );
     }
+
+    ProfileImage = () => {
+        return (
+            <Parallax
+                y={[30, -60]}
+            >
+                <Avatar alt='Zev' src={ProfileImage} style={{ marginTop: 50, width: 150, height: 150 }} />
+            </Parallax>
+        );
+    }
+
 
     About = () => {
         return (
             <div style={{ display: 'flex', flexDirection: 'row' }}>
-                <Avatar alt='Zev' src={ProfileImage} style={{ marginTop: 50, width: 150, height: 150 }} />
+                {/* <Avatar alt='Zev' src={ProfileImage} style={{ marginTop: 50, width: 150, height: 150 }} /> */}
+                <this.ProfileImage />
                 <div style={{ paddingLeft: 20 }}>
                     <this.Subheader />
-                    <p style={styles.aboutText}>
-                        Greetings, I'm a <span style={{ fontWeight: '300' }}>full stack developer</span> with experience building large scale
-                        mobile applications in React Native, as well as experience developing microservice
-                        applications.
-                     </p>
+                    <Parallax y={[20, -30]}>
+                        <p style={styles.aboutText}>
+                            Greetings, I'm a <span style={{ fontWeight: '300' }}>full stack developer</span> with experience building large scale
+                            mobile applications in React Native, as well as experience developing microservice
+                            applications.
+                        </p>
+                    </Parallax>
                 </div>
             </div>
         );
@@ -230,8 +249,8 @@ const styles = {
     },
     headerText: {
         textAlign: 'center',
-        fontSize: 50,
-        fontWeight: '300',
+        fontSize: 70,
+        fontWeight: '400',
         color: TEXT_COLOR
     },
     subheaderText: {

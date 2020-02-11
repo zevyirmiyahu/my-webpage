@@ -7,19 +7,22 @@ import AboutSection from './components/sections/AboutSection';
 import ProjectSection from './components/sections/ProjectSection';
 import IconSection from './components/sections/IconSection';
 import TechSection from './components/sections/TechSection';
+import { ParallaxProvider } from 'react-scroll-parallax';
 
 export default function App() {
   return (
-    <div>
-      <NavBar />
-      <div style={styles.container}>
-        {/* <CurrentView /> */}
-        <AboutSection />
-        <ProjectSection />
-        <IconSection />
-        <TechSection />
+    <ParallaxProvider>
+      <div>
+        <NavBar />
+        <div style={styles.container}>
+          {/* <CurrentView /> */}
+          <AboutSection />
+          <ProjectSection />
+          <IconSection />
+          <TechSection />
+        </div>
       </div>
-    </div>
+    </ParallaxProvider>
   );
 }
 
