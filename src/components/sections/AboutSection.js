@@ -14,12 +14,24 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Typist from 'react-typist';
 import styled from 'styled-components';
 import ReactRotatingText from 'react-rotating-text';
+import AwesomeSlider from 'react-awesome-slider';
+import ParticlesBg from 'particles-bg'
+import posed from 'react-pose';
 
 import * as COLOR from '../../constants/Colors';
 import ProfileImage from '../../assets/desert-cover.jpg';
 
 
 const TEXT_COLOR = COLOR.DARK_GREY;
+
+const Box = posed.div({
+    hoverable: true,
+    // draggable: 'x',
+    // dragBounds: { left: '0%', right: '1020%' },
+    init: { scale: 1 },
+    hover: { scale: 1.3 },
+    drag: { scale: 1.1 },
+});
 
 const AnimatedText = styled(ReactRotatingText)`
 .react-rotating-text-cursor {
@@ -74,7 +86,9 @@ export default class AboutSection extends Component {
 
     ProfileImage = () => {
         return (
-            <Avatar alt='Zev' src={ProfileImage} style={{ marginTop: 50, width: 150, height: 150 }} />
+            <Box>
+                <Avatar alt='Zev' src={ProfileImage} style={{ marginTop: 50, width: 150, height: 150 }} />
+            </Box>
         );
     }
 
@@ -223,6 +237,15 @@ export default class AboutSection extends Component {
         );
     }
 
+    BackgroundCover = () => {
+        return (
+            <ParticlesBg type="circle" bg={true} />
+            // <particles-bg type="random" bg="true" />
+        //    <div style={{position: 'absolute', zIndex: 0, backgroundColor: 'pink', minHeight: '50vh', minWidth: '90vh'}}></div>
+        );
+    }
+
+
     render() {
         return (
             <div style={styles.container}>
@@ -232,8 +255,8 @@ export default class AboutSection extends Component {
                     <this.Divider />
                     {/* <this.TechSkillSectionHeader />
                     <Container maxWidth='lg'>
-                        <this.TechSkillSection />
-                    </Container> */}
+                    <this.TechSkillSection />
+                </Container> */}
                 </Container>
             </div>
         );
@@ -246,9 +269,9 @@ const styles = {
         flexDirection: 'column',
         flex: 1,
         backgroundColor: COLOR.MINT_GREEN,
-        minHeight: '90vh',
-        paddingTop: 20,
-        paddingBottom: 20,
+        minHeight: '50vh',
+        paddingTop: 80,
+        paddingBottom: 50,
         // justifyContent: 'center',
         color: 'white',
     },
