@@ -102,11 +102,11 @@ export default class ProjectSection extends Component {
     ProjectDescription = () => {
         return (
             <div>
-                <Parallax x={['-50px', '50px']}>
+                <Parallax x={['-90px', '90px']}>
                     <p style={styles.projectDescription}>I enjoy learning new programming languages, frameworks and libraries, whether it's front-end or back-end, I'm married to the game and I love her from head to toe.
                     </p>
                 </Parallax>
-                <Parallax x={['90px', '-90px']} y={['20px', '-60px']}>
+                <Parallax x={['90px', '-90px']}>
                     <p style={styles.projectDescription}>My programming portfolio is hosted on GitHub <GitHubIcon style={{ color: 'white' }} />. It has everything from games written in pure Java to blockchains written in JavaScript, oh my! Enjoy.
                     </p>
                 </Parallax>

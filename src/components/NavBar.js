@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import { AppBar, Toolbar, Button, Divider } from '@material-ui/core';
 import TranslateIcon from '@material-ui/icons/Translate';
+import SkyLight from 'react-skylight';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import DescriptionIcon from '@material-ui/icons/Description';
@@ -44,6 +45,22 @@ class NavBar extends Component {
         );
     }
 
+    ResumeModal = () => {
+        return (
+            <div style={styles.resumeModal} >
+                <SkyLight
+                    ref={ref => this.animated = ref}
+                    hideOnOverlayClicked
+                    transitionDuration={1000}
+                >
+                    <div style={{ textAlign: 'center' }}>
+                        <h1>Zev's Resume</h1>
+                    </div>
+                </SkyLight>
+            </div >
+        );
+    }
+
     render() {
         return (
             <AppBar position='sticky' style={styles.navBarContainer}>
@@ -51,12 +68,14 @@ class NavBar extends Component {
 
                     <p style={styles.headerText}>Zev <b>Yirmiyahu</b></p>
 
+                    <this.ResumeModal />
+
                     <div style={styles.buttonGroup}>
                         <Button style={styles.button} >About</Button>
                         <this.spaceButtonBlock />
                         <Button style={styles.button}>Projects</Button>
                         <this.spaceButtonBlock />
-                        <Button style={styles.button}>Resume</Button>
+                        <Button style={styles.button} onClick={() => this.animated.show()}>Resume</Button>
                         <this.spaceButtonBlock />
                         <Button style={styles.button}>Contact</Button>
                     </div>
@@ -73,7 +92,6 @@ class NavBar extends Component {
                         <this.spaceButtonBlock/>
                         <Button style={styles.button2}><DescriptionIcon/><this.spaceIconBlock/>Resume</Button>  */}
                     </div>
-
                 </Toolbar>
             </AppBar>
         );
@@ -120,5 +138,9 @@ const styles = {
         width: 30,
         height: 30,
         color: COLOR.DARK_GREY
+    },
+    resumeModal: {
+        color: COLOR.DARK_GREY,
+        backgroundColor: COLOR.MINT_GREEN,
     }
 }
