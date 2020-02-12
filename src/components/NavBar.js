@@ -8,6 +8,9 @@ import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import DescriptionIcon from '@material-ui/icons/Description';
 
 import * as COLOR from '../constants/Colors';
+import resume_part1_path from '../assets/resume/Resume_Part1.svg';
+import resume_part2_path from '../assets/resume/Resume_Part2.svg';
+
 
 const GITHUB_PATH = 'https://zevyirmiyahu.github.io/';
 const LINKEDIN_PATH = '';
@@ -53,8 +56,10 @@ class NavBar extends Component {
                     hideOnOverlayClicked
                     transitionDuration={1000}
                 >
-                    <div style={{ textAlign: 'center' }}>
+                    <div style={styles.innerModalSection}>
                         <h1>Zev's Resume</h1>
+                        <img alt="Resume Part1 SVG" src={resume_part1_path} />
+                        <img alt="Resume Part2 SVG" src={resume_part2_path} />
                     </div>
                 </SkyLight>
             </div >
@@ -142,5 +147,10 @@ const styles = {
     resumeModal: {
         color: COLOR.DARK_GREY,
         backgroundColor: COLOR.MINT_GREEN,
+    },
+    innerModalSection: {
+        textAlign: 'center',
+        height: 500,
+        overflow: 'scroll'
     }
 }

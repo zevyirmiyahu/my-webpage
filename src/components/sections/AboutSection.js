@@ -205,7 +205,7 @@ export default class AboutSection extends Component {
                             <Typography>
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse malesuada lacus ex,
                                 sit amet blandit leo lobortis eget.
-              </Typography>
+                            </Typography>
                         </ExpansionPanelDetails>
                     </ExpansionPanel>
                 </Container>
