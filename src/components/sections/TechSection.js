@@ -14,7 +14,7 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import * as COLOR from '../../constants/Colors';
 
 
-const TEXT_COLOR = COLOR.MINT_GREEN;
+const TEXT_COLOR = 'white' //COLOR.MINT_GREEN;
 
 export default class TechSection extends Component {
 
@@ -22,21 +22,21 @@ export default class TechSection extends Component {
     TechSkills_Col1 = () => {
         return (
             <div style={{ display: 'flex', flexDirection: 'column' }}>
-                <p style={styles.techText}><span style={{ fontWeight: '500' }}>Front-End Frameworks: </span>Angular, React Native</p>
+                <p style={styles.techCategory}>Front-End Frameworks: <span style={styles.technologiesText}>Angular, React Native</span></p>
 
-                <p style={styles.techText}><span style={{ fontWeight: '500' }}>Back-End Frameworks: </span>Spring, Spring Boot</p>
+                <p style={styles.techCategory}>Back-End Frameworks: <span style={styles.technologiesText}>Spring, Spring Boot</span></p>
 
-                <p style={styles.techText}><span style={{ fontWeight: '500' }}>Languages: </span>Java, C#, C/C++, Ruby, SML, R, MatLab, JavaScript, TypeScript, Oracle SQL</p>
+                <p style={styles.techCategory}>Languages: <span style={styles.technologiesText}>Java, C#, C/C++, Ruby, SML, R, MatLab, JavaScript, TypeScript, Oracle SQL</span></p>
 
-                <p style={styles.techText}><span style={{ fontWeight: '500' }}>Java Technologies: </span>JDBC, JUnit, Swing, Servlets, Tomcat</p>
+                <p style={styles.techCategory}>Java Technologies: <span style={styles.technologiesText}>JDBC, JUnit, Swing, Servlets, Tomcat</span></p>
 
-                <p style={styles.techText}><span style={{ fontWeight: '500' }}>JavaScript Technologies: </span>ReactJS, Axios</p>
+                <p style={styles.techCategory}>JavaScript Technologies: <span style={styles.technologiesText}>ReactJS, Axios</span></p>
 
-                <p style={styles.techText}><span style={{ fontWeight: '500' }}>UI Libraries: </span>BootStrap, Material UI</p>
+                <p style={styles.techCategory}>UI Libraries: <span style={styles.technologiesText}>BootStrap, Material UI</span></p>
 
-                <p style={styles.techText}><span style={{ fontWeight: '500' }}>React Native Technologies: </span>Redux, React Redux, React Camera, React Navigation, React Native Navigation</p>
+                <p style={styles.techCategory}>React Native Technologies: <span style={styles.technologiesText}>Redux, React Redux, React Camera, React Navigation, React Native Navigation</span></p>
 
-                <p style={styles.techText}><span style={{ fontWeight: '500' }}>Operating Systems: </span>Windows, Linux, macOS</p>
+                <p style={styles.techCategory}>Operating Systems: <span style={styles.technologiesText}>Windows, Linux, macOS</span></p>
             </div>
         );
     }
@@ -44,23 +44,23 @@ export default class TechSection extends Component {
     TechSkills_Col2 = () => {
         return (
             <div style={{ display: 'flex', flexDirection: 'column' }}>
-                <p style={styles.techText}><span style={{ fontWeight: '500' }}>Cloud Computing: </span>AWS (AMI, EC2, S3)</p>
+                <p style={styles.techCategory}>Cloud Computing: <span style={styles.technologiesText}>AWS (AMI, EC2, S3)</span></p>
 
-                <p style={styles.techText}><span style={{ fontWeight: '500' }}>Web Services: </span>Rest, SOAP</p>
+                <p style={styles.techCategory}>Web Services: <span style={styles.technologiesText}>Rest, SOAP</span></p>
 
-                <p style={styles.techText}><span style={{ fontWeight: '500' }}>Development Tools: </span>Spring Tool Suite, Eclipse, Visual Studio, Visual Studio Code, Xcode, Android Studio, Oracle Developer</p>
+                <p style={styles.techCategory}>Development Tools: <span style={styles.technologiesText}>Spring Tool Suite, Eclipse, Visual Studio, Visual Studio Code, Xcode, Android Studio, Oracle Developer</span></p>
 
-                <p style={styles.techText}><span style={{ fontWeight: '500' }}>Testing Tools: </span>JUnit</p>
+                <p style={styles.techCategory}>Testing Tools: <span style={styles.technologiesText}>JUnit</span></p>
 
-                <p style={styles.techText}><span style={{ fontWeight: '500' }}>Build Tools: </span>Maven</p>
+                <p style={styles.techCategory}>Build Tools: <span style={styles.technologiesText}>Maven</span></p>
 
-                <p style={styles.techText}><span style={{ fontWeight: '500' }}>Collaboration Tools: </span>Zoom, Slack</p>
+                <p style={styles.techCategory}>Collaboration Tools: <span style={styles.technologiesText}>Zoom, Slack</span></p>
 
-                <p style={styles.techText}><span style={{ fontWeight: '500' }}>Development Enviroment: </span>Agile</p>
+                <p style={styles.techCategory}>Development Enviroment: <span style={styles.technologiesText}>Agile</span></p>
 
-                <p style={styles.techText}><span style={{ fontWeight: '500' }}>Project Management Tools: </span>Jira</p>
+                <p style={styles.techCategory}>Project Management Tools: <span style={styles.technologiesText}>Jira</span></p>
 
-                <p style={styles.techText}><span style={{ fontWeight: '500' }}>Version Control: </span>Git, GitHub</p>
+                <p style={styles.techCategory}>Version Control: <span style={styles.technologiesText}>Git, GitHub</span></p>
             </div>
         );
     }
@@ -97,7 +97,7 @@ export default class TechSection extends Component {
             <div>
                 <div style={styles.container}>
                     <Container maxWidth='lg'>
-                        <h1 style={{color: COLOR.MINT_GREEN}}>Tech Stack</h1>
+                        <h1 style={{color: TEXT_COLOR}}>Tech Stack</h1>
                         <Container maxWidth='md'>
                             <this.TechSkillsSection />
                         </Container>
@@ -114,27 +114,18 @@ const styles = {
         flexDirection: 'column',
         flex: 1,
         backgroundColor: COLOR.DARK_GREY,
-        // minHeight: '96vh',
+        minHeight: '95vh',
         paddingTop: 20,
-        paddingBottom: 20,
-        // justifyContent: 'center',
         color: 'white',
     },
-    headerText: {
-        textAlign: 'center',
-        fontSize: 50,
-        fontWeight: '200',
-        color: TEXT_COLOR
-    },
-    subheaderText: {
-        fontSize: 35,
-        fontWeight: '300',
-        color: TEXT_COLOR
-    },
-    techText: {
+    techCategory: {
         fontSize: 20,
-        fontWeight: '200',
-        color: TEXT_COLOR
+        fontWeight: '500',
+        color: COLOR.MINT_GREEN
     },
+    technologiesText: {
+        fontWeight: '250',
+        color: 'white'
+    }
 
 };
