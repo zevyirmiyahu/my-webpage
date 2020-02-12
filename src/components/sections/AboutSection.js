@@ -15,7 +15,6 @@ import Typist from 'react-typist';
 
 import * as COLOR from '../../constants/Colors';
 import ProfileImage from '../../assets/desert-cover.jpg';
-import { Parallax } from 'react-scroll-parallax';
 
 
 const TEXT_COLOR = COLOR.DARK_GREY;
@@ -48,20 +47,12 @@ export default class AboutSection extends Component {
     }
 
     Subheader = () => {
-        return(
-        <Parallax y={[40, -90]}>
-            <h1 style={{ color: COLOR.DARK_GREY }}>About</h1>
-        </Parallax>
-        );
+        return (<h1 style={{ color: COLOR.DARK_GREY }}>About</h1>);
     }
 
     ProfileImage = () => {
         return (
-            <Parallax
-                y={[30, -60]}
-            >
-                <Avatar alt='Zev' src={ProfileImage} style={{ marginTop: 50, width: 150, height: 150 }} />
-            </Parallax>
+            <Avatar alt='Zev' src={ProfileImage} style={{ marginTop: 50, width: 150, height: 150 }} />
         );
     }
 
@@ -69,17 +60,14 @@ export default class AboutSection extends Component {
     About = () => {
         return (
             <div style={{ display: 'flex', flexDirection: 'row' }}>
-                {/* <Avatar alt='Zev' src={ProfileImage} style={{ marginTop: 50, width: 150, height: 150 }} /> */}
                 <this.ProfileImage />
                 <div style={{ paddingLeft: 20 }}>
                     <this.Subheader />
-                    <Parallax y={[20, -30]}>
-                        <p style={styles.aboutText}>
-                            Greetings, I'm a <span style={{ fontWeight: '300' }}>full stack developer</span> with experience building large scale
-                            mobile applications in React Native, as well as experience developing microservice
-                            applications.
-                        </p>
-                    </Parallax>
+                    <p style={styles.aboutText}>
+                        Greetings, I'm a <span style={{ fontWeight: '300' }}>full stack developer</span> with experience building large scale
+                        mobile applications in React Native, as well as experience developing microservice
+                        applications.
+                    </p>
                 </div>
             </div>
         );
