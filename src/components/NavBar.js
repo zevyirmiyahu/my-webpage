@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import { AppBar, Toolbar, Button, Divider } from '@material-ui/core';
 import TranslateIcon from '@material-ui/icons/Translate';
 import SkyLight from 'react-skylight';
+import styled from 'styled-components';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import DescriptionIcon from '@material-ui/icons/Description';
@@ -15,7 +16,22 @@ import resume_part2_path from '../assets/resume/Resume_Part2.svg';
 const GITHUB_PATH = 'https://zevyirmiyahu.github.io/';
 const LINKEDIN_PATH = '';
 
+const CustomButton = styled(Button)`
+    color: #000;
+    font-size: 16px;
+    color: #282c34;
+    :hover {
+        color: #21ed9f;
+    }
+`
+
 class NavBar extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            hover: false // for button style changes
+        }
+    }
 
     // used to space buttons
     spaceButtonBlock = () => {
@@ -76,20 +92,20 @@ class NavBar extends Component {
                     <this.ResumeModal />
 
                     <div style={styles.buttonGroup}>
-                        <Button style={styles.button} >About</Button>
+                        <CustomButton>About</CustomButton>
                         <this.spaceButtonBlock />
-                        <Button style={styles.button}>Projects</Button>
+                        <CustomButton>Projects</CustomButton>
                         <this.spaceButtonBlock />
-                        <Button style={styles.button} onClick={() => this.animated.show()}>Resume</Button>
+                        <CustomButton onClick={() => this.animated.show()}>Resume</CustomButton>
                         <this.spaceButtonBlock />
-                        <Button style={styles.button}>Contact</Button>
+                        <CustomButton>Contact</CustomButton>
                     </div>
 
                     <div style={styles.buttonGroup2}>
                         <this.LanguageIcon />
-                        <Button style={styles.button}>English</Button>
+                        <CustomButton>English</CustomButton>
                         <this.LanguageDivider />
-                        <Button style={styles.button}>Deutsch</Button>
+                        <CustomButton>German</CustomButton>
 
                         {/* <Button style={styles.button2} href={GITHUB_PATH}><GitHubIcon/><this.spaceIconBlock/>GitHub</Button>
                         <this.spaceButtonBlock/>
@@ -116,7 +132,7 @@ const styles = {
     button: {
         // margin: '15%',
         fontSize: 16,
-        color: COLOR.DARK_GREY
+        color: COLOR.DARK_GREY,
     },
     buttonGroup: {
         marginLeft: '5%',
