@@ -16,7 +16,6 @@ export default function App() {
       <div>
         <NavBar />
         <div style={styles.container}>
-          {/* <CurrentView /> */}
           <AboutSection />
           <ProjectSection />
           <IconSection />
