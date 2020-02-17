@@ -92,13 +92,13 @@ class NavBar extends Component {
                     <this.ResumeModal />
 
                     <div style={styles.buttonGroup}>
-                        <CustomButton>About</CustomButton>
+                        <CustomButton href='#about'>About</CustomButton>
                         <this.spaceButtonBlock />
-                        <CustomButton>Projects</CustomButton>
+                        <CustomButton href='#projects'>Projects</CustomButton>
                         <this.spaceButtonBlock />
                         <CustomButton onClick={() => this.animated.show()}>Resume</CustomButton>
                         <this.spaceButtonBlock />
-                        <CustomButton>Contact</CustomButton>
+                        <CustomButton href='#contact'>Contact</CustomButton>
                     </div>
 
                     <div style={styles.buttonGroup2}>

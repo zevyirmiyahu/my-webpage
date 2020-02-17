@@ -34,6 +34,7 @@ const styles = {
     flexDirection: 'column',
     flex: 1,
     backgroundColor: COLOR.MINT_GREEN,
+    scrollBehavior: 'smooth', 
     // backgroundImage: `url(${background})`,
     // backgroundRepeat: 'no-repeat',
     // backgroundSize: '80%, 90%',

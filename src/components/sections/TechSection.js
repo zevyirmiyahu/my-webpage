@@ -94,7 +94,7 @@ export default class TechSection extends Component {
 
     render() {
         return (
-            <div>
+            <div id='tech'>
                 <div style={styles.container}>
                     <Container maxWidth='lg'>
                         <h1 style={{color: TEXT_COLOR}}>Tech Stack</h1>

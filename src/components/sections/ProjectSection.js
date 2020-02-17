@@ -135,7 +135,7 @@ export default class ProjectSection extends Component {
 
     render() {
         return (
-            <div style={styles.container}>
+            <div id='projects' style={styles.container}>
                 <Container maxWidth='lg'>
                     <Parallax x={['-60px', '60px']}>
                         <h1 style={{ color: 'white' }}>Projects</h1>

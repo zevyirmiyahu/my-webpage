@@ -31,7 +31,7 @@ export default class ContactSection extends Component {
 
     render() {
         return (
-            <div style={styles.container}>
+            <div id='contact' style={styles.container}>
                 <Container style={styles.innerContainer} maxWidth='md'>
                     <this.IconGroup1 />
                     <div style={{ textAlign: 'center'}}>

@@ -95,7 +95,7 @@ export default class AboutSection extends Component {
 
     render() {
         return (
-            <div>
+            <div id='about'>
                 <this.CoverPhoto />
                 <div style={styles.container}>
                     <Container maxWidth="lg">
