@@ -8,7 +8,8 @@ import {
     ExpansionPanelSummary,
     ExpansionPanelDetails,
     Typography,
-    Paper
+    Paper,
+    Grid
 } from '@material-ui/core';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import Typist from 'react-typist';
@@ -92,11 +93,9 @@ export default class AboutSection extends Component {
         );
     }
 
-
     About = () => {
         return (
             <div style={{ display: 'flex', flexDirection: 'row' }}>
-                <this.ProfileImage />
                 <div style={{ paddingLeft: 20 }}>
                     <this.Subheader />
                     <p style={styles.aboutText}>
@@ -237,27 +236,39 @@ export default class AboutSection extends Component {
         );
     }
 
-    BackgroundCover = () => {
+    CoverPhoto = () => {
         return (
-            <ParticlesBg type="circle" bg={true} />
-            // <particles-bg type="random" bg="true" />
-        //    <div style={{position: 'absolute', zIndex: 0, backgroundColor: 'pink', minHeight: '50vh', minWidth: '90vh'}}></div>
+            <img
+                style={{ position: 'absolute', right: 200, width: 420, height: 569 }}
+                alt='astronaut'
+                src={require('../../assets/Cartoons.png')}
+            />
         );
     }
 
-
     render() {
         return (
-            <div style={styles.container}>
-                <this.Header />
-                <Container maxWidth="lg">
-                    <this.About />
-                    <this.Divider />
-                    {/* <this.TechSkillSectionHeader />
-                    <Container maxWidth='lg'>
-                    <this.TechSkillSection />
-                </Container> */}
-                </Container>
+            <div>
+                <this.CoverPhoto/>
+                <div style={styles.container}>
+                    <Container maxWidth="lg">
+                        <Grid container spacing={3}>
+                            <Grid item xs={12}>
+                                <this.Header />
+                            </Grid>
+                            <Grid item xs={2}>
+                                <this.ProfileImage />
+                            </Grid>
+                            <Grid item xs={5}>
+                                <this.About />
+                            </Grid>
+                            <Grid item xs={4}>
+
+                            </Grid>
+                        </Grid>
+                        <this.Divider />
+                    </Container>
+                </div>
             </div>
         );
     }
@@ -268,30 +279,38 @@ const styles = {
         display: 'flex',
         flexDirection: 'column',
         flex: 1,
-        backgroundColor: COLOR.MINT_GREEN,
+        // backgroundColor: COLOR.MINT_GREEN,
+        // background: 'radial-gradient(#21ed9f, #117850)',
+        background: 'radial-gradient(#21ed9f, #14c9b7)',
         minHeight: '50vh',
         paddingTop: 80,
         paddingBottom: 50,
         // justifyContent: 'center',
         color: 'white',
     },
-    headerContainer: {
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-    },
+    // headerContainer: {
+    //     display: 'flex',
+    //     flexDirection: 'column',
+    //     alignItems: 'center',
+    // },
     headerText: {
+        position: 'relative',
+        zIndex: 2,
         textAlign: 'center',
         fontSize: 70,
         fontWeight: '700',
         color: TEXT_COLOR
     },
     subheaderText: {
+        position: 'relative',
+        zIndex: 2,
         fontSize: 35,
         fontWeight: '300',
         color: TEXT_COLOR
     },
     aboutText: {
+        position: 'relative',
+        zIndex: 2,
         paddingBottom: 80,
         fontSize: 30,
         fontWeight: '200',
